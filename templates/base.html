@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -6,65 +7,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <!--Font Link-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 
-        <title> {% block title %}{% endblock title %} </title>
     </head>
 
-    <style>
-    .navbar a{
-    font-family: Verdana !important;
-    }
-    </style>
-    <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark p-3" style="background-color: #020526;">
-            <div class = "container py-auto">
-                <a class="navbar-brand h1" href="/"><b>PRICE PERFECT</b></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                            {% if request.user.is_authenticated %}
-                                <div class="navbar-nav">
-                                    <a class="nav-item nav-link" href="{% url 'logout' %}">Log Out</a>
-                                </div>
-                            {% else %}
-                                <div class="navbar-nav">
-                                    <a class="nav-item nav-link" href="{% url 'login' %}">Log In</a>
-                                </div>
-                                <div class="navbar-nav">
-                                    <a class="nav-item nav-link" href="{% url 'signup' %}">Sign Up</a>
-                                </div>
-                            {% endif %}
-                        </ul>
-                    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'mainpage' %}"><b>PRICE PERFECT</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">Random</a>
+                        <a class="nav-link" href="#">Sample</a>
+                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#">Resouces</a>
                     </div>
-            </div>
-        </nav>
-
-        <main class="container mt-1 pb-2">
-        {% if messages %}
-            {% for mess in messages %}
-                <div class="alert alert-{{mess.tags}}" role="alert">
-                    {{mess}}
                 </div>
-            {% endfor %}
-        {% endif %} 
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <form class="d-flex " id="authstyle">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="btn" style="color: white; background-color: #006c6c;"type="submit" id="header-links"> Logout </a>
+                    {% else %}
+                        <a href="{% url 'signup' %}" class="btn" style="color: white; background-color: #006c6c;"type="submit" id="header-links"> Create Account </a>
+                        <a href="{% url 'login' %}" class="btn" style="color: white; background-color: #006c6c; margin-left: 10px; "type="submit" id="header-links">Log In</a>
+                    {% endif %}
+                    </form>
+                </div>
+        </div>
+    </nav>
 
-    </main>
-    
+      <div>
+        <div class="container">
+          {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{message.tags}}">{{message}}</div>
+          {% endfor %}
+        {% endif %}
+        </div>
+        {% block body %}
+        {% endblock body %}
+      </div>
 
-    {% block body %}
-        
-    
-        
-    {% endblock body %}
+      
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-    </body>
+  </body>
 </html>

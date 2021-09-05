@@ -78,7 +78,7 @@ def resend_otp(request):
 				[usr.email],
 				fail_silently = False
 				)
-			return HttpResponse("Resend")
+		return HttpResponse("Resend")
 
 	return HttpResponse("Can't Send ")
 
@@ -132,4 +132,3 @@ def login_view(request):
 
 	form = AuthenticationForm()
 	return render(request, 'user/login.html', {'form': form})
-
