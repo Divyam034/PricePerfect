@@ -7,11 +7,11 @@
         <div class="row">
             <div class="col-md-4">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 bg-light mt-3">
                 {% if otp %}
                 <form method="POST">
                 {% csrf_token %}
-                    <fieldset class="form-group mt-5">
+                    <fieldset class="form-group">
                         <legend class="border-bottom display">
                             <h3 class="float-left">Verify Your Email</h3>
                         </legend>
