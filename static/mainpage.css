@@ -16,7 +16,7 @@ padding: 100px;
 .banner{
 position: relative;
 min-height: 100vh;
-background: url(/static/img/banner1.png);
+background: url(/static/img/drbanner.png);
 background-size: cover;
 background-position: right;
 display: flex;
@@ -397,9 +397,7 @@ section
 {
 padding: 100px 50px;
 }
-.banner{
-padding: 150px 50px 100px;
-}
+.banner{padding: 300px 361px 90px;}
 .banner h2{
 font-size: 1.5em;
 }
