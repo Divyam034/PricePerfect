@@ -12,13 +12,13 @@
 <body>
     <header>
         <a href="#" class="logo">PRICE PERFECT</a>
-        <div class="toggle"></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aim">Our Aim</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#developers">About Developers</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+            <li><a href="#developers" onclick="toggleMenu();">About Developers</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
+            <li><a href="#home" onclick="toggleMenu();">Sign-In/Sign-Up</a></li>
         </ul>
     </header>
     <section class="banner" id="home">
@@ -36,7 +36,15 @@
             <div class="contentBx w50">
                 <h3>About Price Perfect</h3>
                 <p>
-                    Price Perfect is a web platform. It is developed to rectify buyer's and seller's problems who are planning to buy or sell either a Real Estate property or a Pre-Owned car. It aim towards helping people by providing them great price predictions with approximations upto _______ . Buyer's will be prevented from over-pricing and seller's will be prevented from under-pricing, which has always been an issue in the offline market. 
+                    Price Perfect is a web platform. It is developed to rectify buyer's and seller's
+                    problems who are
+                    planning to buy or sell either a Real Estate property or a Pre-Owned car. It aim
+                    towards helping
+                    people by providing them great price predictions with approximations upto _______ .
+                    Buyer's will be
+                    prevented from over-pricing and seller's will be prevented from under-pricing, which
+                    has always been
+                    an issue in the offline market.
                 </p>
             </div>
             <div class="w50">
@@ -50,49 +58,57 @@
             Fill in the desired inputs and great predictions are then just one click away.
         </div>
         <div class="content">
-            <a href="https://www.flipkart.com/" class="RE"><div class="servicesBxRE">
-                <img src="/static/img/RealEstate.png" alt="Real Estate">
-                <h2>REAL ESTATE</h2>
-                <p>Planning to buy your dream property?<br> Let us help you in your budgeting.</p>
-            </div></a>
+            <a href="https://www.flipkart.com/" class="RE">
+                <div class="servicesBxRE">
+                    <img src="/static/img/RealEstate.png" alt="Real Estate">
+                    <h2>REAL ESTATE</h2>
+                    <p>Planning to buy your dream property?<br> Let us help you in your budgeting.</p>
+                </div>
+            </a>
             <div class="blankRE"></div>
-            <a href="https://www.amazon.in/" class="car"><div class="servicesBxCar">
-               <img src="/static/img/Pre-Owned Car.png" alt="Pre-Owned Cars">
-                <h2>PRE-OWNED CAR</h2>
-                <p>Planning to buy a pre-owned four wheeler?<br> Let us help you in your budgeting.</p>
-            </div></a>
+            <a href="https://www.amazon.in/" class="car">
+                <div class="servicesBxCar">
+                    <img src="/static/img/Pre-Owned Car.png" alt="Pre-Owned Cars">
+                    <h2>PRE-OWNED CAR</h2>
+                    <p>Planning to buy a pre-owned four wheeler?<br> Let us help you in your
+                        budgeting.</p>
+                </div>
+            </a>
             <div class="blankCar"></div>
         </div>
     </section>
-
-    <section class="developers" id="developers">
-        <div class="heading">
+    <section class="servicesX" id="developers">
+        <div class="heading white2">
             <h2>About Developers</h2>
-            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, quos similique. Nobis pariatur non
-                corporis officiis accusantium nulla fuga consequatur.</p> -->
         </div>
         <div class="content">
-            <div class="testimonialBx">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate repellat maiores aspernatur
-                    veniam debitis ipsum error officiis iure atque vero enim optio qui necessitatibus id deserunt
-                    eligendi veritatis ducimus praesentium tempora vel voluptatum, sit, suscipit quisquam. Quo quos
-                    itaque libero!</p>
-                <h3>DEVANSHU JAIN <br><span>0901CS191031</span></h3>
+            <div class="servicesBxRE">
+                <img src="/static/img/devanshu.png" alt="Real Estate" height="150px" width="150px">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate repellat maiores
+                    aspernatur
+                    veniam debitis ipsum error officiis iure. </p>
+                <h3 class="DJ">DEVANSHU JAIN <br><span>0901CS191031</span></h3>
+                </p>
             </div>
-            <div class="testimonialBx">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate repellat maiores aspernatur
-                    veniam debitis ipsum error officiis iure atque vero enim optio qui necessitatibus id deserunt
-                    eligendi veritatis ducimus praesentium tempora vel voluptatum, sit, suscipit quisquam. Quo quos
-                    itaque libero!</p>
-                <h3>DIVYAM <br><span>0901CS191034</span></h3>
+            <div class="blankRE"></div>
+            <div class="servicesBxCar">
+                <img src="/static/img/divyam.png" alt="Pre-Owned Cars" height="150px" width="150px">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate repellat maiores
+                    aspernatur
+                    veniam debitis ipsum error officiis iu.</p>
+                <h3 class="DC">DIVYAM <br><span>0901CS191034</span></h3>
+                </p>
             </div>
+            <div class="blankCar"></div>
         </div>
     </section>
     <section class="contact" id="contact">
         <div class="heading">
             <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti perspiciatis hic ratione tenetur itaque
-                repellendus sapiente ab explicabo incidunt amet non ad atque veritatis, placeat vitae numquam est
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti perspiciatis hic
+                ratione tenetur itaque
+                repellendus sapiente ab explicabo incidunt amet non ad atque veritatis, placeat vitae
+                numquam est
                 dolorum unde.</p>
         </div>
         <div class="content">
@@ -102,7 +118,8 @@
                     <div class="box">
                         <div class="text">
                             <h3>Address</h3>
-                            <p>Lorem ipsum dolor sit, <br> amet consectetur adipisicing elit. Corporis, <br> voluptates.
+                            <p>Lorem ipsum dolor sit, <br> amet consectetur adipisicing elit. Corporis, <br>
+                                voluptates.
                             </p>
                         </div>
                     </div>
@@ -131,15 +148,20 @@
             </div>
         </div>
     </section>
-<div class="copyright">
-    <p>copyright © 2021 Price Perfect. All Rights Reserved.</p>
-</div>
-
+    <div class="copyright">
+        <p>copyright © 2021 Price Perfect. All Rights Reserved.</p>
+    </div>
     <script type="text/javascript">
         window.addEventListener('scroll', function () {
             var header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         })
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
     </script>
 </body>
 
