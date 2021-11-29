@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "priceperfect.apps.PriceperfectConfig",
+    "prediction.apps.PredictionConfig",
     "user.apps.UserConfig",
     "crispy_forms",
 ]

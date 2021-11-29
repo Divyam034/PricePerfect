@@ -24,5 +24,6 @@ admin.site.index_title = "PricePerfect"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("priceperfect.urls")),
-    path("user/", include("user.urls"))
+    path("user/", include("user.urls")),
+    path("prediction/", include("prediction.urls")),
 ]
