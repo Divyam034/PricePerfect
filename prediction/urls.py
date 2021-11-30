@@ -1,7 +1,8 @@
 from django.urls import path, include
-from .views import car
+from .views import carpage, predict
 
 
 urlpatterns = [
-    path("car/", car, name="car" ),
+    path("carpage/", carpage, name="carpage" ),
+    path("carpage/predict", predict,name="predict"),
 ]
